@@ -1,3 +1,14 @@
+let comp = pilihanComp();
+const inf = document.getElementById('info');
+const player = document.querySelectorAll('ul li');
+const sComp = document.getElementById('sComp');
+const sPlayer = document.getElementById('sPlayer');
+let skorP = 0;
+let skorC = 0;
+let nyawa = 3
+
+//* where all the rues begin
+rules(player);
 
 //! user-defined-functions
 // func untuk bertanya dan mengembalikan nilai true or false
@@ -51,18 +62,3 @@ const rules = function rules(player) {
     })
   }
 }
-
-
-// let tanya = true
-let comp = pilihanComp();
-const inf = document.getElementById('info');
-const player = document.querySelectorAll('ul li');
-const sComp = document.getElementById('sComp');
-const sPlayer = document.getElementById('sPlayer');
-let skorP = 0;
-let skorC = 0;
-
-let nyawa = 3
-
-//* rules
-rules(player);
