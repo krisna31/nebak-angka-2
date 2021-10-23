@@ -1,14 +1,3 @@
-let comp = pilihanComp();
-const inf = document.getElementById('info');
-const player = document.querySelectorAll('ul li');
-const sComp = document.getElementById('sComp');
-const sPlayer = document.getElementById('sPlayer');
-let skorP = 0;
-let skorC = 0;
-let nyawa = 3
-
-//* where all the rues begin
-rules(player);
 
 //! user-defined-functions
 // func untuk bertanya dan mengembalikan nilai true or false
@@ -20,7 +9,6 @@ function cobalagi() {
 const cobalah = function cobalah() {
   setTimeout(function () {
     keputusan = cobalagi();
-    console.log(keputusan);
     if (keputusan == true) {
       inf.innerHTML = "";
       nyawa = 3;
@@ -39,7 +27,6 @@ const rules = function rules(player) {
   player.forEach(choices);
   function choices(e) {
     e.addEventListener('click', function () {
-      console.log(nyawa);
       const pilihanPlayer = e.className;
       if (pilihanPlayer == comp) {
         skorP++;
@@ -62,3 +49,16 @@ const rules = function rules(player) {
     })
   }
 }
+
+let comp = pilihanComp();
+const inf = document.getElementById('info');
+const player = document.querySelectorAll('ul li');
+const sComp = document.getElementById('sComp');
+const sPlayer = document.getElementById('sPlayer');
+let skorP = 0;
+let skorC = 0;
+
+let nyawa = 3
+
+//* rules
+rules(player);
